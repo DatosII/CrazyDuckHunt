@@ -5,10 +5,9 @@ class Player{
 private:
     int _id, _points;
 public:
-    Player();
+    Player(int pID);
     int getId();
     int getPoints();
-    void setId(int pID);
     void setPoints(int pPoint);
 };
 
