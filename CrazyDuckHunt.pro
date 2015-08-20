@@ -21,6 +21,7 @@ HEADERS  += \
     GUI/graphicscene.h \
     GUI/myobject.h \
     GUI/graphicview.h \
-    duck.h
+    Logic/Duck.h \
+    Logic/Player.h
 
 FORMS    +=
