@@ -15,7 +15,9 @@ TEMPLATE = app
 SOURCES += main.cpp \
     GUI/graphicscene.cpp \
     GUI/myobject.cpp \
-    GUI/graphicview.cpp
+    GUI/graphicview.cpp \
+    Logic/Player.cpp \
+    Logic/Duck.cpp
 
 HEADERS  += \
     GUI/graphicscene.h \
