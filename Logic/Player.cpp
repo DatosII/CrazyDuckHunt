@@ -9,7 +9,7 @@ int Player::getId(){
     return _id;
 }
 int Player::getPoints(){
-    return _points
+    return _points;
 }
 
 void Player::setPoints(int pPoint){

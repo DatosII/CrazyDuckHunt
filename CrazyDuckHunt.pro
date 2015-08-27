@@ -17,7 +17,8 @@ SOURCES += main.cpp \
     GUI/myobject.cpp \
     GUI/graphicview.cpp \
     Logic/Player.cpp \
-    Logic/Duck.cpp
+    Logic/Duck.cpp \
+    Logic/probabilidades.cpp
 
 HEADERS  += \
     GUI/graphicscene.h \
@@ -25,6 +26,7 @@ HEADERS  += \
     GUI/graphicview.h \
     Logic/Duck.h \
     Logic/Player.h \
-    Logic/game.h
+    Logic/game.h \
+    Logic/probabilidades.h
 
 FORMS    +=
