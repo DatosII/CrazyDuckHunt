@@ -5,14 +5,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-class probabilidades{
+class Probabilidades{
 private:
     int _pSalvajeIni=0, _pSalvajeFin=81, _gHawaiiIni=82, _gHawaiiFin=91, _pColoradoIni=92, _pColoradoFin=96,
     _tCaneloIni=97, _tCaneloFin=98, _yPiquirrojoIni=99, _yPiquirrojoFin=99, _contadorPS=0, _contadorGH=0, _contadorPC=0,
     _contadorTC=0, _contadorYP=0;
     std::string _salvaje="salvaje", _Hawaii="Hawaii", _colorado="colorado", _canelo="canelo", _yaguasa="yaguasa";
 public:
-    prob();
+    Probabilidades();
     void actualizarValores();
     std::string obtenerPato();
     int obtenerNumero();

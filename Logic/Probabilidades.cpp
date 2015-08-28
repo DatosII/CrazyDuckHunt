@@ -1,10 +1,10 @@
-#include "probabilidades.h"
+#include "Probabilidades.h"
 
-probabilidades::probabilidades(){
+Probabilidades::Probabilidades(){
 
 }
 
-void probabilidades::actualizarValores()
+void Probabilidades::actualizarValores()
 {
     _pSalvajeFin-=4;
     _gHawaiiIni-=4;
@@ -23,7 +23,7 @@ void probabilidades::actualizarValores()
 
 
 
-std::string probabilidades::obtenerPato(){
+std::string Probabilidades::obtenerPato(){
     int pTipo=obtenerNumero();
     if(pTipo>=_pSalvajeIni && pTipo<=_pSalvajeFin && (_contadorPS<(_pSalvajeFin-_pSalvajeIni))){
             _contadorPS++;
@@ -49,6 +49,6 @@ std::string probabilidades::obtenerPato(){
         return obtenerPato();
 }
 
-int probabilidades::obtenerNumero(){
+int Probabilidades::obtenerNumero(){
     return (rand()%(100));
 }
