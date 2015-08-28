@@ -14,6 +14,11 @@ void probabilidades::actualizarValores()
     _tCaneloIni-=2;
     _tCaneloFin-=1;
     _yPiquirrojoIni-=1;
+    _contadorGH=0;
+    _contadorPC=0;
+    _contadorPS=0;
+    _contadorTC=0;
+    _contadorYP=0;
 }
 
 
