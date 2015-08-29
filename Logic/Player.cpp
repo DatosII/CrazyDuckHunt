@@ -5,12 +5,18 @@ Player::Player(int pId){
 
 }
 
+
 int Player::getId(){
     return _id;
 }
+
+
+
 int Player::getPoints(){
     return _points;
 }
+
+
 
 void Player::setPoints(int pPoint){
     _points=pPoint;

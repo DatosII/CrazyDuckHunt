@@ -8,7 +8,7 @@
 #include <QPixmap>
 #include <QtGui>
 #include <iostream>
-#include <ventanaip.h>
+#include "ClientePrincipal-ServidorSecundario/ventanaip.h"
 
 using namespace std;
 

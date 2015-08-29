@@ -10,20 +10,25 @@
 class Duck{
   private:
     std::default_random_engine generator;
-    std::string _type, _id;
+    std::string _type;
+    int _id;
     int _posX, _posY, _moveX, _moveY, _life;
+    double _media, _desviacion;
 
     int generateRandomPos(int pMax);
 
 public:
-    Duck(std::string pID);
+    Duck(int pID);
     ~Duck();
 
-    int generateDistribution(double pMedia, double pDesviacion);
+    int generateDistribution(double pMedia, double pDesviacion, bool pSign);
     void update();
+    void setLife(double pMedia, double pDesv);
+    void setSpeed(double pMedia, double pDesv);
+    void setType(std::string pType);
     int getPosX();
     int getPosY();
-    std::string getID();
+    int getID();
 
 };
 

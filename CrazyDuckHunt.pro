@@ -21,15 +21,12 @@ SOURCES += main.cpp \
     Logic/Probabilidades.cpp \
     Logic/game.cpp \
     ClientePrincipal-ServidorSecundario/clientecomandos.cpp \
-    ClientePrincipal-ServidorSecundario/main.cpp \
     ClientePrincipal-ServidorSecundario/mainwindow.cpp \
     ClientePrincipal-ServidorSecundario/ventanacomandos.cpp \
     ClientePrincipal-ServidorSecundario/ventanaip.cpp \
     ClientePrincipal-ServidorSecundario/ventanajugador.cpp \
     ClientePrincipal-ServidorSecundario/ventanaprincipal.cpp \
     ClientePrincipal-ServidorSecundario/ventanavisitante.cpp \
-    ServidorPrincipal/logica.cpp \
-    ServidorPrincipal/main.cpp \
     ServidorPrincipal/servidor.cpp
 
 HEADERS  += \
@@ -51,3 +48,5 @@ HEADERS  += \
     ServidorPrincipal/servidor.h
 
 FORMS    +=
+
+CONFIG += c++11

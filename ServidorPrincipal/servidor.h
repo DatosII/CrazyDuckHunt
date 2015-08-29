@@ -1,7 +1,7 @@
 #ifndef SERVIDOR_H
 #define SERVIDOR_H
 
-#include <logica.h>
+
 #include <pthread.h>
 #include <string.h>
 #include <sys/types.h>

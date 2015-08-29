@@ -9,9 +9,9 @@
 #include <QIcon>
 #include <QMainWindow>
 #include <iostream>
-#include <ventanacomandos.h>
-#include <ventanavisitante.h>
-#include <ventanajugador.h>
+#include "ClientePrincipal-ServidorSecundario/ventanacomandos.h"
+#include "ClientePrincipal-ServidorSecundario/ventanavisitante.h"
+#include "ClientePrincipal-ServidorSecundario/ventanajugador.h"
 #include <string>
 #include <string.h>
 

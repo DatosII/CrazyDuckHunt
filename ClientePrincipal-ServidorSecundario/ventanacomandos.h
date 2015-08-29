@@ -10,7 +10,7 @@
 #include <QMainWindow>
 #include <iostream>
 #include <pthread.h>
-#include <clientecomandos.h>
+#include "ClientePrincipal-ServidorSecundario/clientecomandos.h"
 
 using namespace std;
 

@@ -6,7 +6,6 @@
  */
 Servidor::Servidor(){
 
-    Logica* logica = new Logica();
 
 //    pthread_create(&thread_receive,NULL,recibir,&loop);
 //    pthread_create(&thread_receive,NULL,enviar,&loop);

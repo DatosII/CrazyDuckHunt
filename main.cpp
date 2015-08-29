@@ -1,12 +1,16 @@
 #include <QApplication>
 #include "GUI/graphicview.h"
+#include "Logic/game.h"
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
+int main(int argc, char *argv[]){
+   // QApplication a(argc, argv);
 
-    GraphicView *view = new GraphicView();
+   // GraphicView *view = new GraphicView();
 
 
-    return a.exec();
+    Game *game = new Game();
+    game->startGame();
+
+
+    return 0;
 }
