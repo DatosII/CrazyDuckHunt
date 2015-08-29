@@ -1,24 +1,30 @@
 #ifndef DUCK
 #define DUCK
 
+#include <pthread.h>
+#include <iostream>
+#include <QMainWindow>
+
+
 
 class Duck{
-private:
-    char _type;
-    int _posX, _posY, _speed, _life;
+  private:
+    std::default_random_engine generator;
+    std::string _type, _id;
+    int _posX, _posY, _moveX, _moveY, _life;
+
+    int generateRandomPos(int pMax);
 
 public:
-    Duck(char pType);
-    void setPosX(int pPosX);
-    void setPosY(int pPosY);
-    void setLife(int pLife);
-    void setSpeed(int pSpeed);
+    Duck(std::string pID);
+    ~Duck();
+
+    int generateDistribution(double pMedia, double pDesviacion);
+    void update();
     int getPosX();
     int getPosY();
-    int getLife();
-    int getSpeed();
-    char getType();    
-    void move(int pPosX, int pPosY);
+    std::string getID();
+
 };
 
 #endif // DUCK
