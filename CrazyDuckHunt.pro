@@ -27,7 +27,8 @@ SOURCES += main.cpp \
     ClientePrincipal-ServidorSecundario/ventanajugador.cpp \
     ClientePrincipal-ServidorSecundario/ventanaprincipal.cpp \
     ClientePrincipal-ServidorSecundario/ventanavisitante.cpp \
-    ServidorPrincipal/servidor.cpp
+    ServidorPrincipal/servidor.cpp \
+    Facade/Facade.cpp
 
 HEADERS  += \
     GUI/graphicscene.h \
@@ -45,7 +46,8 @@ HEADERS  += \
     ClientePrincipal-ServidorSecundario/ventanaprincipal.h \
     ClientePrincipal-ServidorSecundario/ventanavisitante.h \
     ServidorPrincipal/logica.h \
-    ServidorPrincipal/servidor.h
+    ServidorPrincipal/servidor.h \
+    Facade/Facade.h
 
 FORMS    +=
 

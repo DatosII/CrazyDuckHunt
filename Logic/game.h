@@ -7,7 +7,7 @@
 #include "Probabilidades.h"
 #include "Duck.h"
 #include <QDebug>
-
+#include "Facade/Facade.h"
 
 
 class Game{
@@ -29,12 +29,14 @@ private:
     void insertDuck(Duck *pDuck);
     void deleteDuck(int pID);
     void updateDucks();
+    Facade *_facade;
 
 
 public:
     Game(); /** Constructor */
     void startGame(); /** Método para iniciar el loop */
     void stopGame(); /** Método para finalizar el loop */
+    void DeadDuck(int pArray[]);
 };
 
 #endif // GAME_H

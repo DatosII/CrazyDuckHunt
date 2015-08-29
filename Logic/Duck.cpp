@@ -10,7 +10,7 @@
  */
 Duck::Duck(int pID){
     this->_id = pID;
-    this->_posX = this->generateRandomPos(1300);
+    this->_posX = this->generateRandomPos(1100);
     this->_posY = this->generateRandomPos(500);
     this->_moveX = this->generateDistribution(4.0, 2.0, true);
     this->_moveY = this->generateDistribution(4.0, 2.0, true);
@@ -135,7 +135,7 @@ void Duck::setType(std::string pType){
  */
 void Duck::update(){
 
-    if((this->getPosX())+64 > 1366){
+    if((this->getPosX())+64 > 1100){
         this->_moveX = this->generateDistribution(_media, _desviacion, false);
     }
     if(this->_posX < 0){
@@ -144,7 +144,7 @@ void Duck::update(){
     if(this->_posY < 0){
         this->_moveY = this->generateDistribution(_media, _desviacion, true);
     }
-    if((this->_posY)+64 > 576){
+    if((this->_posY)+64 > 500){
         this->_moveY = this->generateDistribution(_media, _desviacion, false);
     }
 

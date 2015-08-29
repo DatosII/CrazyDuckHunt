@@ -5,10 +5,11 @@
  * @brief Constructor de la la clase Game
  * Inicializa la variable Game::_running en false,esta variable se utiliza como condicion para el loop
  */
-Game::Game(){
+Game::Game(Facade *pFacade){
     this->_running = false;
     this->_probabilidades = new Probabilidades();
     this->cleanArray();
+    this->_facade=pFacade;
 }
 
 
@@ -76,6 +77,9 @@ void Game::insertDuck(Duck *pDuck){
             }
         }
     }
+    else{
+        this->stopGame();
+    }
 }
 
 
@@ -87,6 +91,7 @@ void Game::updateDucks(){
     for(int i = 0; i<20; i++){
         if(_ducks[i] != 0){
             _ducks[i]->update();
+
         }
     }
 }
@@ -119,8 +124,6 @@ void Game::createNewDuck(){
  */
 void Game::run(){
 
-    //Duck *duck = new Duck(5);
-    //duck->setSpeed(4.0,5.0);
 
     gettimeofday(&_timeNew1, NULL);
     this->_msDuckNewDuck1 = (long long) _timeNew1.tv_sec * 1000L + _timeNew1.tv_usec / 1000;
@@ -135,18 +138,27 @@ void Game::run(){
         gettimeofday(&_timeUpdate2, NULL);
         this->_msUpdate2 = (long long) _timeUpdate2.tv_sec * 1000L + _timeUpdate2.tv_usec / 1000;
 
-        if((_msDuckNewDuck2-_msDuckNewDuck1) > 10000){
+        if((_msDuckNewDuck2-_msDuckNewDuck1) > 1000){
             this->createNewDuck();
             gettimeofday(&_timeNew1, NULL);
             this->_msDuckNewDuck1 = (long long) _timeNew1.tv_sec * 1000L + _timeNew1.tv_usec / 1000;
         }
 
         if((_msUpdate2-_msUpdate1) > 500){
-           // duck->update();
             this->updateDucks();
             gettimeofday(&_timeUpdate1, NULL);
             this->_msUpdate1 = (long long) _timeUpdate1.tv_sec * 1000L + _timeUpdate1.tv_usec / 1000;
         }
 
     }
+
+    qDebug() << "FIN DEL JUEGO: HAY 20 PATOS EN PANTALLA";
+}
+/**
+ * @brief Game::DeadDuck Metodo para eliminar patos muertos
+ * @param pArray
+ */
+void Game::DeadDuck(int pArray[]){
+    delete(_ducks[pArray[1]]);
+    _ducks[pArray[1]]=0;
 }
