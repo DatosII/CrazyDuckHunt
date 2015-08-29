@@ -27,7 +27,7 @@ public:
 
 private:
     static void * recibir(void * argument);
-    void dostuff(int sock);
+    void enviar(int sock);
 };
 
 #endif // SERVIDOR_H

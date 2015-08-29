@@ -1,6 +1,9 @@
 #include "servidor.h"
 #include <iostream>
-
+/**
+ * @brief Servidor::Servidor
+ *Metodo que se encarga de crear la conexion, crear los threads, cerrar conexion y controlar el numero de clientes a administrar
+ */
 Servidor::Servidor(){
 
     Logica* logica = new Logica();
@@ -50,7 +53,7 @@ Servidor::Servidor(){
                 pid = fork();
                 if(pid == 0){
                     close(clientes);
-                    dostuff(servidor);
+                    enviar(servidor);
                     exit(0);
                 }
 
@@ -59,13 +62,21 @@ Servidor::Servidor(){
         close(clientes);
     }
 }
-
+/**
+ * @brief Servidor::recibir
+ * @param argument
+ * Metodo que se encarga de recibir datos por buffer de servidor-cliente y de cliente-servidor
+ */
 void * Servidor::recibir(void * argument){
     while (*((bool*) argument))
         cout << "Estoy en el thread recibir" <<endl;
 }
-
-void Servidor::dostuff(int sock){
+/**
+ * @brief Servidor::enviar
+ * @param sock
+ * Metodo que se encarga de enviar datos por buffer de servidor-cliente y de cliente-servidor
+ */
+void Servidor::enviar(int sock){
     while(loop){
         int n;
         char buffer[256];
@@ -80,6 +91,10 @@ void Servidor::dostuff(int sock){
     }
 }
 
-
+/**
+ * @brief Servidor::~Servidor
+ *Metodo constructor de la clase
+ */
 Servidor::~Servidor(){
 }
+
